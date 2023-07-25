@@ -14,7 +14,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    assetModuleFilename: 'assets/[name][ext]'
   },
   module: {
     rules: [
@@ -53,7 +54,8 @@ module.exports = {
         }
       },
       {
-        test: /\.(gif|png|jpe?g|svg|webp)$/i,
+        test: /\.(jpe?g|gif|png|svg|webp)$/i,
+        type: 'asset/resource',
         use: [
           {
             loader: 'image-webpack-loader',

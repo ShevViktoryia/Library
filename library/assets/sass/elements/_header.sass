@@ -10,6 +10,21 @@ header
 .header_logo
   justify-self: flex-start
 
+  &:after
+    cursor: pointer
+    background-color: $white_color
+    display: block
+    content: ""
+    height: 2px
+    width: 0%
+    -webkit-transition: width .3s ease-in-out
+    -moz--transition: width .3s ease-in-out
+    transition: width .3s ease-in-out
+
+  &:hover:after,
+  &:focus:after
+      width: 100%
+
 .login_icon
   width: 28px
   height: 28px
@@ -21,7 +36,7 @@ header
   justify-content: flex-end
 
 .header_nav
-  @media screen and (max-width: 985px)
+  @media screen and (max-width: 1230px)
     display: none
     transform: translateX(-100%)
     transition: transform 0.5s
@@ -33,7 +48,7 @@ header
 .nav_list
   display: flex
 
-  @media screen and (max-width: 985px)
+  @media screen and (max-width: 1230px)
     flex-direction: column
     width: 332px
     height: 570px
@@ -42,7 +57,11 @@ header
 .nav_item
   margin-right: 30px
 
-  @media screen and (max-width: 985px)
+  &:hover
+    border-bottom: 2px solid $white_color
+    transform: 0.5s easy
+
+  @media screen and (max-width: 1230px)
     margin-right: 0
     margin-bottom: 30px
 
@@ -55,7 +74,7 @@ header
   cursor: pointer
   width: 45px
 
-  @media screen and (max-width: 985px)
+  @media screen and (max-width: 1230px)
     display: flex
     flex-direction: column
     margin-left: 40px
