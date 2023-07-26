@@ -1,0 +1,41 @@
+.coffee_wrapper
+  @include display(flex, column, unset, unset)
+
+.coffee_text
+  text-align: center
+
+.coffeeShop_menu
+  @include display(flex, row, unset, space-between)
+  padding: 40px 0
+  @media screen and (max-width: 1420px)
+    @include display(flex, column, unset, space-between)
+
+.menu_title
+  font-size: 40px
+  color: $beige_color
+
+.coffee_tea, .desserts
+  @include display(flex, column, unset, unset)
+  width: 482px
+
+.menu_item
+  @include display(flex, row, center, space-between)
+  padding-top: 40px
+.menu_item  span
+  display: block
+  margin: 0 60px
+  width: 100px
+  border-bottom: 1px solid $beige_color
+  font-weight: bold
+
+.desserts
+  .menu_item
+    justify-content: end
+  .menu_title
+    align-self: flex-end
+  @media screen and (max-width: 1420px)
+    align-self: flex-end
+    margin-top: 40px
+
+.coffee_tea .item_name
+  width: 210px
