@@ -1,6 +1,169 @@
 import './index.html';
 import './assets/sass/pages/_index.sass';
 import sliderData from './assets/data/sliderData';
+import winterData from './assets/data/seasonsData/winterData';
+import springData from './assets/data/seasonsData/springData';
+import summerData from './assets/data/seasonsData/summerData';
+import autumnData from './assets/data/seasonsData/autumnData';
+
+function whatSeason(cur_season) {
+  let books_list = document.querySelector('.books_list');
+  let prev_season = [...document.querySelectorAll('input[type=radio]')];
+  books_list.innerHTML = '';
+  prev_season.forEach(item => {item.checked ? item.checked = false : cur_season.checked = true});
+  switch(cur_season.id) {
+    case 'winter':
+      winterData.forEach(item => {
+        const book = document.createElement('div');
+        book.className = 'book';
+        const publishing_house = document.createElement('p');
+        publishing_house.className = 'publishing_house';
+        const span = document.createElement('span');
+        publishing_house.textContent = item.publishing_house;
+        const book_name = document.createElement('p');
+        book_name.className = 'book_name';
+        book_name.textContent = item.name;
+        const author = document.createElement('p');
+        author.className = 'author';
+        author.textContent = item.author;
+        const about_book = document.createElement('div');
+        about_book.className = 'about_book';
+        const description = document.createElement('p');
+        description.className = 'description';
+        description.textContent = item.description;
+        const button = document.createElement('button');
+        button.className = 'book_button';
+        button.textContent = item.button_value;
+        const book_img = document.createElement('img');
+        book_img.className = 'book_img';
+        book_img.src = `${item.image}`;
+        book_img.alt = item.name;
+        publishing_house.appendChild(span);
+        book.append(publishing_house);
+        book.append(book_name);
+        book.append(author);
+        description.append(button);
+        about_book.append(description);
+        about_book.append(book_img);
+        book.append(about_book);
+        books_list.append(book);
+      });
+      break;
+    case 'spring':
+      springData.forEach(item => {
+        const book = document.createElement('div');
+        book.className = 'book';
+        const publishing_house = document.createElement('p');
+        publishing_house.className = 'publishing_house';
+        const span = document.createElement('span');
+        publishing_house.textContent = item.publishing_house;
+        const book_name = document.createElement('p');
+        book_name.className = 'book_name';
+        book_name.textContent = item.name;
+        const author = document.createElement('p');
+        author.className = 'author';
+        author.textContent = item.author;
+        const about_book = document.createElement('div');
+        about_book.className = 'about_book';
+        const description = document.createElement('p');
+        description.className = 'description';
+        description.textContent = item.description;
+        const button = document.createElement('button');
+        button.className = 'book_button';
+        button.textContent = item.button_value;
+        const book_img = document.createElement('img');
+        book_img.className = 'book_img';
+        book_img.src = `${item.image}`;
+        book_img.alt = item.name;
+        publishing_house.appendChild(span);
+        book.append(publishing_house);
+        book.append(book_name);
+        book.append(author);
+        description.append(button);
+        about_book.append(description);
+        about_book.append(book_img);
+        book.append(about_book);
+        books_list.append(book);
+      });
+      break;
+      case 'summer':
+        summerData.forEach(item => {
+          const book = document.createElement('div');
+          book.className = 'book';
+          const publishing_house = document.createElement('p');
+          publishing_house.className = 'publishing_house';
+          const span = document.createElement('span');
+          publishing_house.textContent = item.publishing_house;
+          const book_name = document.createElement('p');
+          book_name.className = 'book_name';
+          book_name.textContent = item.name;
+          const author = document.createElement('p');
+          author.className = 'author';
+          author.textContent = item.author;
+          const about_book = document.createElement('div');
+          about_book.className = 'about_book';
+          const description = document.createElement('p');
+          description.className = 'description';
+          description.textContent = item.description;
+          const button = document.createElement('button');
+          button.className = 'book_button';
+          button.textContent = item.button_value;
+          const book_img = document.createElement('img');
+          book_img.className = 'book_img';
+          book_img.src = `${item.image}`;
+          book_img.alt = item.name;
+          publishing_house.appendChild(span);
+          book.append(publishing_house);
+          book.append(book_name);
+          book.append(author);
+          description.append(button);
+          about_book.append(description);
+          about_book.append(book_img);
+          book.append(about_book);
+          books_list.append(book);
+        });
+        break;
+        case 'autumn':
+          autumnData.forEach(item => {
+            const book = document.createElement('div');
+            book.className = 'book';
+            const publishing_house = document.createElement('p');
+            publishing_house.className = 'publishing_house';
+            const span = document.createElement('span');
+            publishing_house.textContent = item.publishing_house;
+            const book_name = document.createElement('p');
+            book_name.className = 'book_name';
+            book_name.textContent = item.name;
+            const author = document.createElement('p');
+            author.className = 'author';
+            author.textContent = item.author;
+            const about_book = document.createElement('div');
+            about_book.className = 'about_book';
+            const description = document.createElement('p');
+            description.className = 'description';
+            description.textContent = item.description;
+            const button = document.createElement('button');
+            button.className = 'book_button';
+            button.textContent = item.button_value;
+            const book_img = document.createElement('img');
+            book_img.className = 'book_img';
+            book_img.src = `${item.image}`;
+            book_img.alt = item.name;
+            publishing_house.appendChild(span);
+            book.append(publishing_house);
+            book.append(book_name);
+            book.append(author);
+            description.append(button);
+            about_book.append(description);
+            about_book.append(book_img);
+            book.append(about_book);
+            books_list.append(book);
+          });
+          break;
+        case 'default':
+          break;
+  }
+}
 
 const burger_menu = document.querySelector('.burger_menu');
 const nav = document.querySelector('.header_nav');
@@ -15,7 +178,6 @@ sliderData.forEach(item => {
   slider_list.append(slider_item);
 })
 
-let slider_dots = document.querySelector('.slider_dots');
 let slider_dote = [...document.querySelectorAll('.dot')];
 let wrap = document.querySelector('.slider_track');
 let slider_item = [...document.querySelectorAll('.slider_item')];
@@ -93,3 +255,8 @@ left_arrow.onclick = () => {
     break;
   }
 }
+
+
+let season_buttons = [...document.querySelectorAll('input[type=radio]')];
+whatSeason(season_buttons[0]);
+season_buttons.forEach(item => item.onclick = () => whatSeason(item));

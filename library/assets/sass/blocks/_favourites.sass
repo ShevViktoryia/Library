@@ -1,0 +1,84 @@
+.seasons
+  @include display(flex, column, flex-start, center)
+
+.seasons_text
+  letter-spacing: 0px
+  line-height: 0px
+  padding: 40px 0px
+
+.season_input
+  margin-right: 20px
+  color: #000
+
+input[type="radio"]:checked
+  accent-color: #000
+
+input:checked + label
+  font-weight: bold
+
+.season_label
+  letter-spacing: 0
+  margin-right: 90px
+  line-height: 0
+
+.books_list
+  display: grid
+  grid-template-columns: repeat(2, 550px)
+  grid-template-rows: repeat(2, 555px)
+  column-gap: 220px
+  row-gap: 40px
+  padding: 40px 0
+  @media screen and (max-width: 1420px)
+    grid-template-columns: repeat(1, 550px)
+    grid-template-rows: repeat(4, 555px)
+    column-gap: 0
+
+.book
+  @include display(flex, column, unset, unset)
+  border: 1px solid #000
+  padding: 15px 20px
+  position: relative
+  height: inherit
+
+.publishing_house > span
+  display: block
+  margin: 10px 0 20px
+  width: 60px
+  border-bottom: 1px solid $beige_color
+  font-weight: bold
+
+.book_name, .author
+  font-size: 15px
+  font-weight: bold
+
+.book_name
+  text-transform: uppercase
+
+.about_book
+  @include display(flex, row, unset, unset)
+  position: relative
+  width: fit-content
+  height: 370px
+
+.description
+  @include display(flex, column, unset, space-between)
+  font-size: 15px
+  text-transform: capitalize
+  width: 355px
+  padding-top: 20px
+
+.book_button
+  width: 75px
+  height: 30px
+  color: $black_color
+  border: 2px solid $black_color
+  background-color: unset
+
+.book_img
+  width: 200px
+  height: 300px
+  position: relative
+  z-index: 3
+  float: right
+  right: -55px
+  top: 88px
