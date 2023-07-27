@@ -1,0 +1,17 @@
+.contacts_wrapper
+  @include display(flex, row, unset, space-between)
+  @media screen and (max-width: 1160px)
+    @include display(flex, column, unset, unset)
+
+.libraries_contacts, .senior_staff
+  font-weight: bold
+
+.phone_contacts
+  padding: 40px 0
+
+.map
+  width: 696px
+  height: 414px
+  background-color: grey
+  @media screen and (max-width: 1160px)
+    margin-top: 100px

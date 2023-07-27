@@ -260,3 +260,4 @@ left_arrow.onclick = () => {
 let season_buttons = [...document.querySelectorAll('input[type=radio]')];
 whatSeason(season_buttons[0]);
 season_buttons.forEach(item => item.onclick = () => whatSeason(item));
+
