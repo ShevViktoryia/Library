@@ -33,6 +33,7 @@ const autumnData = [
   },
   {
     id: 4,
+    publishing_house: 'Staff Picks',
     name: 'Slug: And Other Stories',
     author: 'By Megan Milks',
     description: "Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.",

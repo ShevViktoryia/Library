@@ -33,6 +33,7 @@ const springData = [
   },
   {
     id: 4,
+    publishing_house: 'Staff Picks',
     name: 'The Last Queen',
     author: 'By Clive Irving',
     description: 'A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.',

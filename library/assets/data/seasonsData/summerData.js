@@ -33,6 +33,7 @@ const summerData = [
   },
   {
     id: 4,
+    publishing_house: 'Staff Picks',
     name: 'Shark Dialogues: A Novel',
     author: 'By Kiana Davenport',
     description: 'An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.',

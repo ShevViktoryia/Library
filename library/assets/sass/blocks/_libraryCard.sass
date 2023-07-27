@@ -1,0 +1,86 @@
+.LibraryCard_wrapper
+  @include display(flex, row, unset, space-between)
+  @media screen and (max-width: 1160px)
+    @include display(flex, column, unset, unset)
+
+.form_wrapper
+  @include display(flex, column, unset, unset)
+  width: 600px
+
+.form_header
+  align-self: center
+
+.card_form
+  @include display(flex, column, unset, unset)
+  margin-top: 32px
+  border: 3px solid $beige_color
+  padding: 20px
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.3)
+
+.card_wrapper
+  @include display(flex, column, unset, unset)
+  font-family: 'Forum'
+  font-size: 15px
+  line-height: 50px
+  padding: 0 20px
+  background-color: $beige_color
+  input
+    width: 520px
+    height: 66px
+    margin-bottom: 25px
+    border: none
+    padding-left: 20px
+    border-radius: 10px
+
+.card_title
+  font-weight: bold
+
+.check_card
+  border: 1px solid $black_color
+  background: none
+  font-size: 20px
+  letter-spacing: 1px
+  font-weight: bold
+  padding: 10px 40px
+  margin-top: 20px
+  border-radius: 2px
+  align-self: center
+  transition: background 0.8s ease
+  &:hover
+    cursor: pointer
+    border-color: $beige_color
+    background: $beige_color
+
+.get_card_wrapper
+  @include display(flex, column, flex-end, unset)
+  max-width: 456px
+  width: 100%
+
+.get_card_title
+  font-family: 'Forum',
+  font-size: 30px
+
+.get_card_text
+  letter-spacing: 1px
+  text-align: end
+  padding: 35px 0
+
+.sginin_buttons
+  @include display(flex, row, unset, unset)
+
+.sign_up
+  margin-right: 20px
+
+.sign_up, .login
+  border: 1px solid $black_color
+  background: none
+  font-size: 10px
+  letter-spacing: 1px
+  font-weight: bold
+  border-radius: 2px
+  padding: 9px 15.5px
+  transition: background 0.8s ease
+  &:hover
+    cursor: pointer
+    border-color: $beige_color
+    background: $beige_color
