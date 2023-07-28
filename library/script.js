@@ -261,3 +261,18 @@ let season_buttons = [...document.querySelectorAll('input[type=radio]')];
 whatSeason(season_buttons[0]);
 season_buttons.forEach(item => item.onclick = () => whatSeason(item));
 
+
+let book_buttons = [...document.querySelectorAll('.book_button')];
+book_buttons.forEach(item => {
+  if(item.textContent === 'Own') {
+    console.log(item);
+    item.style.color = '#BB945F';
+    item.style.borderColor = '#BB945F';
+    item.onmouseover = () => {
+      item.style.color = '#0C0C0E';
+    }
+    item.onmouseout = () => {
+      item.style.color = '#BB945F';
+    }
+  }
+})

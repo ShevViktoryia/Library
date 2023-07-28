@@ -1,7 +1,7 @@
 .LibraryCard_wrapper
   @include display(flex, row, unset, space-between)
   @media screen and (max-width: 1160px)
-    @include display(flex, column, unset, unset)
+    @include display(flex, column, center, unset)
 
 .form_wrapper
   @include display(flex, column, unset, unset)
@@ -31,6 +31,10 @@
     border: none
     padding-left: 20px
     border-radius: 10px
+    &:focus, &:hover, &:valid
+      border: 1px solid $beige_color
+      color: $beige_color
+
 
 .card_title
   font-weight: bold
@@ -55,6 +59,9 @@
   @include display(flex, column, flex-end, unset)
   max-width: 456px
   width: 100%
+  @media screen and (max-width: 1160px)
+    margin-top: 20px
+    align-items: center
 
 .get_card_title
   font-family: 'Forum',
@@ -64,6 +71,8 @@
   letter-spacing: 1px
   text-align: end
   padding: 35px 0
+  @media screen and (max-width: 1160px)
+    text-align: center
 
 .sginin_buttons
   @include display(flex, row, unset, unset)
